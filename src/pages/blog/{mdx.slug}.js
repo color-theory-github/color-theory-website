@@ -20,7 +20,7 @@ const BlogPost = ({ data }) => {
         data-hashtags="ColorTheory"
         data-show-count="false"
       >
-        Tweet
+        Post Tweet
       </a>
       <Script
         async

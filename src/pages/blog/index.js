@@ -1,19 +1,24 @@
 import * as React from "react";
-import { Link, graphql } from "gatsby";
+import { graphql } from "gatsby";
+import { getImage } from "gatsby-plugin-image";
 import Layout from "../../components/layout";
+import Card from "../../components/blogCard";
+import * as styles from "../../components/card.module.css";
 
 const BlogPage = ({ data }) => {
-  console.log();
   return (
-    <Layout pageTitle="My Blog Posts">
-      {data.allMdx.nodes.map((node) => (
-        <article key={node.id}>
-          <h2>
-            <Link to={`/blog/${node.slug}`}>{node.frontmatter.title}</Link>
-          </h2>
-          <p>Posted: {node.frontmatter.datePublished}</p>
-        </article>
-      ))}
+    <Layout pageTitle="Latest Releases">
+      <div className={styles.flexList}>
+        {data.allMdx.nodes.map((node) => (
+          <Card
+            link={`/blog/${node.slug}`}
+            date={node.frontmatter.datePublished}
+            title={node.frontmatter.title}
+            id={node.id}
+            image={getImage(node.frontmatter.hero_image)}
+          />
+        ))}
+      </div>
     </Layout>
   );
 };
@@ -24,6 +29,11 @@ export const query = graphql`
       nodes {
         frontmatter {
           datePublished(formatString: "MMMM DD, YYYY")
+          hero_image {
+            childImageSharp {
+              gatsbyImageData
+            }
+          }
           title
         }
         id

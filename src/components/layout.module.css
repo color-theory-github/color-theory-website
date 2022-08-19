@@ -1,26 +1,60 @@
-.container {
-  margin: auto;
-  max-width: 500px;
+*{
+  margin: 0;
+  padding: 0;
   font-family: sans-serif;
 }
-.heading {
-  color: rebeccapurple;
+
+.site-header {
+  width: 100%;
+  background-color: black;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  height: 6rem;
 }
+
 .nav-links {
   display: flex;
   list-style: none;
-  padding-left: 0;
 }
 .nav-link-item {
   padding-right: 2rem;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  letter-spacing: .25rem;
+  cursor:auto;
 }
 .nav-link-text {
-  color: black;
+  font-size: 1rem;
+  color: white;
+  text-decoration: none;
 }
 .site-title {
-  font-size: 3rem;
-  color: gray;
-  font-weight: 700;
-  margin: 3rem 0;
+  margin: 1rem;
+  background-color: white;
+  color: rgb(92, 0, 0);
+  font-size: 2.5rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: .30rem;
+  position: relative;
+}
+
+.heading {
+  color: black;
+  font-size: 2rem;
+  padding-left: .5rem;
+
+}
+
+.site-title-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.page-content {
+ margin: 2.5rem 5rem;
 }
 

@@ -1,15 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+body{
+  line-height: 1.5;
+}
+
 *{
   margin: 0;
   padding: 0;
-  font-family: sans-serif;
+  font-family: 'Poppins', sans-serif;
 }
 
 .flex-list {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+/*
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(12rem, 20rem));
   gap: 1rem;
   justify-content: space-between;
-}
+*/
 /*
   display: flex;
   justify-content: space-between;
@@ -22,9 +34,10 @@
   cursor: ponter;
   display:flex;
   flex-direction: column;
-  margin-top: 1rem;
+  margin-top: 4em;
+  width: 20em;
   overflow: hidden;
-  padding: .5rem;
+  padding: .5em;
   text-decoration: none;
   transition: transform 200ms ease-in;
 }
@@ -36,18 +49,18 @@
 /* box-shadow: 0 10px 10px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23); */
 
 .card-photo {
-  border: solid;
-  height: 16rem;
+  border: 2px solid black;
+  height: 16em;
   width:100%;
   object-fit: cover;
 }
 .card-link {
-  margin: 1rem;
+  margin: 1em;
   text-align: center;
   color: black;
 }
 .card-date {
-  margin: 1rem;
+  margin: 1em;
   font-size: .75rem;
   text-align: end;
   color: black;
